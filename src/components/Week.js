@@ -1,9 +1,10 @@
 
 //single week component
-import React from 'react';
+import React, { useState } from 'react';
 import Day from './Day';
 
 function Week({ startDate }) {
+
   const days = [];
 
   for (let i = 0; i < 7; i++) {
@@ -12,11 +13,14 @@ function Week({ startDate }) {
     days.push(date);
   }
 
+
   return (
     <div className="flex flex-col">
       {days.map((day, index) => (
-        <Day key={index} date={day} />
+        <Day key={index} date={day}  />
       ))}
+
+     
     </div>
   );
 }
